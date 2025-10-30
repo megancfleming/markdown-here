@@ -1,0 +1,26 @@
+flowchart TD
+    A[Flow Synthesis<br>(Vapourtec)] --> B[Crystallisation<br>(DART + MSMPR)]
+    B --> C[Isolation and Drying]
+    C --> C1[Agitated Filter Dryer]
+    C --> C2[Carousel Filter Dryer]
+    C --> C3[Vacuum Double Drum Dryer]
+
+    %% PAT Tools
+    A --- A_PAT[Inline PAT Sensors]
+    B --- B_PAT[Particle Size & Turbidity Sensors]
+    C --- C_PAT[Moisture & Residual Solvent Sensors]
+
+    %% Control Software
+    B --> D[PharmaMV Control Software]
+    D --> A
+    D --> B
+    D --> C
+
+    %% Styling
+    style A fill:#d0e6ff,stroke:#036,stroke-width:2px
+    style B fill:#d0e6ff,stroke:#036,stroke-width:2px
+    style C fill:#d0e6ff,stroke:#036,stroke-width:2px
+    style D fill:#ffe6e6,stroke:#900,stroke-width:2px
+    style A_PAT fill:#f0fff0,stroke:#090,stroke-width:1px
+    style B_PAT fill:#f0fff0,stroke:#090,stroke-width:1px
+    style C_PAT fill:#f0fff0,stroke:#090,stroke-width:1px
